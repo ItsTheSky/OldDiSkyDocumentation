@@ -6,7 +6,7 @@ description: >-
 
 # ⚔ Vixio VS DiSky
 
-| Feature Name                                                   |    Vixio Supports?   |    DiSky Supports?   |
+| Feature Name                                                   |        Vixio?        |        DiSky?        |
 | -------------------------------------------------------------- | :------------------: | :------------------: |
 | Discord Commands                                               | :white\_check\_mark: | :white\_check\_mark: |
 | Entities Managments                                            | :white\_check\_mark: | :white\_check\_mark: |
