@@ -51,14 +51,14 @@ It basically looks like that:
 | ---------------------------- | :------------: | --------------------------- | - | - |
 | Text: :x:                    |      None      | `<text>`                    |   |   |
 | Member: :white\_check\_mark: | `event-member` | `[<member=%event-member%>]` |   |   |
-| Numner: :white\_check\_mark: |      None      | `[<number>]`                |   |   |
+| Number: :white\_check\_mark: |      None      | `[<number>]`                |   |   |
 | Offline Player: :x:          |      None      | `<offlineplayer>`           |   |   |
 
 {% hint style="info" %}
 As you may notice, **Optional** arguments are simply surrounded by `[ ]` while keeping the default `< >` argument delimination.
 {% endhint %}
 
-So let's make a simply `reply` command, that reply with what the first argument is set to:
+So let's make a simple `reply` command, that will reply with what the first argument is set to:
 
 ```applescript
 discord command reply [<text>]:
@@ -72,7 +72,7 @@ discord command reply [<text>]:
 
 ### Other Features
 
-The discord commands also comes with features that are here to make your life easier.
+The discord commands also come with features that are there to make your life easier.
 
 #### Specific Origin
 
@@ -99,7 +99,7 @@ discord command ...:
 
 #### Utility Entries
 
-Some entries are just here as a placeholder and can only be managed through Skript code. For example, any command can have a `description`, `usage`, and `category` entry. However, it can only be accessed through Skript's syntax, and is not shown in Discord in any way:
+Some entries are just here as placeholders and can only be managed through Skript code. For example, any command can have a `description`, `usage`, and `category` entry. However, it can only be accessed through Skript's syntax, and is not shown in Discord in any way:
 
 ```applescript
 discord command ...:
