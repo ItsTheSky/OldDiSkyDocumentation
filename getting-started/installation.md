@@ -1,4 +1,4 @@
-# 1. Installation
+# 1⃣ Installation
 
 You'll see here how to **install** DiSky correctly.
 

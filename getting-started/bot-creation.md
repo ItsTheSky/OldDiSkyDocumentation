@@ -1,4 +1,4 @@
-# 2. Bot Creation
+# 2⃣ Bot Creation
 
 First, we need to create the application then the Discord bot itself
 

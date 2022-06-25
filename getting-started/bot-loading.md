@@ -1,12 +1,12 @@
-# 3. Bot Loading
+# 3⃣ Bot Loading
 
 
 
-> :warning: You should check [**Bot Creation**](2.-bot-creation.md) before if you haven't yet!
+> :warning: You should check [**Bot Creation**](bot-creation.md) before if you haven't yet!
 
 You'll see here how to use DiSky in a Skript file, especially how to load your bot.
 
-### 0. Introduction to Scopes
+### 0. Introduction to Scopes <a href="#scopes" id="scopes"></a>
 
 DiSky is using a lot of **scopes**, which are very similar to the event system. Instead of being in a trigger (such as on load or a command), a scope is the trigger itself and thus can be placed in a file without a parent.
 
