@@ -9,3 +9,7 @@ Before doing anything with DiSky, you must create, load, and know some basics st
 {% content-ref url="bot-creation.md" %}
 [bot-creation.md](bot-creation.md)
 {% endcontent-ref %}
+
+{% content-ref url="bot-loading.md" %}
+[bot-loading.md](bot-loading.md)
+{% endcontent-ref %}

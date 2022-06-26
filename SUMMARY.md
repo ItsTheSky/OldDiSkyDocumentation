@@ -8,5 +8,7 @@
   * [3⃣ Bot Loading](getting-started/bot-loading.md)
 * [📦 Basic Stuff](basic-stuff/README.md)
   * [📐 Discord Commands](basic-stuff/discord-commands.md)
+  * [📺 Presence & Status](basic-stuff/presence-and-status.md)
+* [⚒ Advanced Stuff](advanced-stuff.md)
 * [🎛 Modules](modules/README.md)
   * [📡 Webhooks](modules/webhooks.md)
