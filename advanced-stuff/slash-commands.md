@@ -70,3 +70,22 @@ on slash command:
         # we lastly reply with something, that will also acknowledge (= approve) the command.
         reply with "%mention tag of {_target}% is level X"
 ```
+
+### Using localizations (v4.3.0+)
+
+Localizations are value-per-language systems. You will be able to change the command's name and description according to the client's selected language.
+
+{% hint style="info" %}
+Even if localizations are fully available on DiSky, Discord has not released it yet, and you'll need a specific [version derogation](https://discord.com/\_\_development/link?s=VQw65opXPNOuzDRAa9ID91y7BV0U0ATg%2FmZfrhCBCqc%3D.eyJ0YXJnZXRCdWlsZE92ZXJyaWRlIjp7ImRpc2NvcmRfd2ViIjp7InR5cGUiOiJicmFuY2giLCJpZCI6ImZlYXR1cmUvd2ViLXNsYXNoLWNvbW1hbmQtbG9jYWxpemF0aW9uIn19LCJyZWxlYXNlQ2hhbm5lbCI6bnVsbCwidmFsaWRGb3JVc2VySWRzIjpbXSwiYWxsb3dMb2dnZWRPdXQiOmZhbHNlLCJleHBpcmVzQXQiOiJXZWQsIDEwIEF1ZyAyMDIyIDE3OjE4OjQ1IEdNVCJ9) to see localizations!
+{% endhint %}
+
+You can find a list of locale codes on [Discord Docs](https://discord.com/developers/docs/reference#locales), and use them on DiSky to provide per-language name and description:
+
+```applescript
+# here we defined the default and fallback name & description
+set {_cmd} to new slash command named "level" with description "Check your level"
+
+# We add french derogation for the name and the description
+add new locale data for "FR" with value "niveau" to name localizations of {_cmd}
+add new locale data for "FR" with value "Voir votre niveau" to description localizations of {_cmd}
+```

@@ -9,7 +9,7 @@
 * [📦 Basic Stuff](basic-stuff/README.md)
   * [📐 Discord Commands](basic-stuff/discord-commands.md)
   * [📺 Presence & Status](basic-stuff/presence-and-status.md)
-* [⚒ Advanced Stuff](advanced-stuff/README.md)
+* [⚒ Advanced Stuff](advanced-stuff.md)
   * [📯 Slash Commands](advanced-stuff/slash-commands.md)
 * [🎛 Modules](modules/README.md)
   * [📡 Webhooks](modules/webhooks.md)
