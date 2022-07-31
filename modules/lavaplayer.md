@@ -16,7 +16,7 @@ connect bot named "fancyBOT" to voice channel of event-member
 
 ## Fetching audio
 
-Before playing audio you need to retrieve said audio.
+Before playing audio you need to retrieve said audio and store it in a variable.
 
 ```applescript
 search in "youtube" parsed as audio source for "never gonna give you up" and store the tracks in {_result::*}
@@ -26,7 +26,15 @@ search in "youtube" parsed as audio source for "never gonna give you up" and sto
 The `audio source` can be either "youtube" or "soundcloud". The `query` can be either text or a link, these links can also be playlists.
 {% endhint %}
 
-## Looping
+##Playing audio
+
+Finally all you need to do is play the audio stored in the variable!
+
+```applescript
+play {_result::*} in event-guild
+```
+
+## Looping audio
 
 You can make your bot look the current audio in a specific guild using the following effect.
 
