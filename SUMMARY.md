@@ -13,3 +13,4 @@
   * [📯 Slash Commands](advanced-stuff/slash-commands.md)
 * [🎛 Modules](modules/README.md)
   * [📡 Webhooks](modules/webhooks.md)
+  * [🎵 LavaPlayer](modules/lavaplayer.md)
