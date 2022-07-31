@@ -26,7 +26,7 @@ search in "youtube" parsed as audio source for "never gonna give you up" and sto
 The `audio source` can be either "youtube" or "soundcloud". The `query` can be either text or a link, these links can also be playlists.
 {% endhint %}
 
-##Looping
+## Looping
 
 You can make your bot look the current audio in a specific guild using the following effect.
 
