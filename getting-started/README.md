@@ -1,6 +1,6 @@
 # 🪧 Getting Started
 
-Before doing anything with DiSky, you must create, load, and know some basics stuff od Discord bots:
+Before doing anything with DiSky, you must create, load, and know some basic stuff on Discord bots:
 
 {% content-ref url="installation.md" %}
 [installation.md](installation.md)
