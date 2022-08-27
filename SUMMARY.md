@@ -12,5 +12,6 @@
   * [📺 Presence & Status](basic-stuff/presence-and-status.md)
 * [⚒ Advanced Stuff](advanced-stuff.md)
   * [📯 Slash Commands](advanced-stuff/slash-commands.md)
+  * [💭 Advanced Messages](advanced-stuff/advanced-messages.md)
 * [🎛 Modules](modules/README.md)
   * [📡 Webhooks](modules/webhooks.md)

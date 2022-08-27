@@ -14,7 +14,7 @@ reply with "Hello World!"
 post "Hello World!" to text channel with id "000" # specific channel
 ```
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Result of a response in a slash command</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (8).png" alt=""><figcaption><p>Result of a response in a slash command</p></figcaption></figure>
 
 ### Simple Embed Message
 
@@ -32,7 +32,7 @@ An embed can have different properties:
 
 Here's an example embed containing all the above properties:
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>Full example of an embed</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Full example of an embed</p></figcaption></figure>
 
 {% hint style="warning" %}
 You cannot set a "sub" property (<mark style="color:purple;">in purple</mark>) without setting the main property.
