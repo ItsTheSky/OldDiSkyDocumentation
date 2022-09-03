@@ -15,3 +15,4 @@
   * [💭 Advanced Messages](advanced-stuff/advanced-messages.md)
 * [🎛 Modules](modules/README.md)
   * [📡 Webhooks](modules/webhooks.md)
+* [📙 F.A.Q.](f.a.q..md)
