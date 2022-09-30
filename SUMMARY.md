@@ -10,6 +10,7 @@
   * [💬 Simple Messages](basic-stuff/simple-messages.md)
   * [📐 Discord Commands](basic-stuff/discord-commands.md)
   * [📺 Presence & Status](basic-stuff/presence-and-status.md)
+  * [📂 Forums](basic-stuff/forums.md)
   * [🤖 Multiple Bots](basic-stuff/multiple-bots.md)
 * [⚒ Advanced Stuff](advanced-stuff.md)
   * [📯 Slash Commands](advanced-stuff/slash-commands.md)
