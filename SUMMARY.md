@@ -14,6 +14,7 @@
   * [🤖 Multiple Bots](basic-stuff/multiple-bots.md)
 * [⚒ Advanced Stuff](advanced-stuff.md)
   * [📯 Slash Commands](advanced-stuff/slash-commands.md)
+  * [🗂 SelectMenu/Dropdown](advanced-stuff/selectmenu-dropdown.md)
   * [💭 Advanced Messages](advanced-stuff/advanced-messages.md)
 * [🎛 Modules](modules/README.md)
   * [📡 Webhooks](modules/webhooks.md)
