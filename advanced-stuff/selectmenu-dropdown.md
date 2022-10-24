@@ -58,3 +58,39 @@ If your dropdown is a string dropdown, then you can add **options** that the use
 * Value, is not shown on Discord, but will be returned once the user completes the interaction. <mark style="color:red;">Required</mark>
 * Emoji, also shown on Discord. <mark style="color:green;">Optional.</mark>
 * Description, also shown on Discord. <mark style="color:green;">Optional.</mark>
+
+Here's an example code to add an option:
+
+{% code overflow="wrap" %}
+```applescript
+add new option with value "value" named "A choice .." with description "Chose wisely!" with reaction "joy" to options of {_dp}
+```
+{% endcode %}
+
+{% hint style="warning" %}
+The value specified in an option **cannot be found in another option**, they are unique, like IDs!
+{% endhint %}
+
+### Retrieve values
+
+Now out dropdown is sent, users can interact with them. There are two separate events for the two types of dropdowns (string and entity). In both cases, however, you can use `event-dropdown` to retrieve the identifier of the dropdown used.
+
+#### String dropdown
+
+```applescript
+on dropdown click:
+```
+
+> You can use `selected values` to get the values the user selected inside of this event.
+
+#### Entity dropdown
+
+```applescript
+on entity dropdown click:
+```
+
+> You can use `selected entities` to get the roles, channels and/or users selected inside of this event.
+
+{% hint style="warning" %}
+Don't forget to **reply or defer** this interaction!
+{% endhint %}
