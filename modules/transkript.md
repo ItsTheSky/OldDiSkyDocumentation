@@ -6,7 +6,7 @@ This is a **premium** module and can be accessed through [**Patreon**](https://w
 
 ### Overview
 
-This module will provide support for Discord(like website generation. You'll be able to re-create and save forever a conversation while including the replies, attachments, colors, references, and much more!
+This module will provide support for Discord(like website generation. You'll be able to re-create and save forever a conversation while including the replies, attachments, colors, references, and much more! It requires Java 16+ and DiSky v4.6.0+
 
 #### What can be saved?
 
