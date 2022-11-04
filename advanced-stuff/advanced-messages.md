@@ -51,7 +51,7 @@ reply with {_msg}
 A bot-message can only contain one embed. However, if using webhooks, you can provide a maximum of 5 embeds!
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>The output of the code above.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (2).png" alt=""><figcaption><p>The output of the code above.</p></figcaption></figure>
 
 ### Add attachments
 
@@ -72,7 +72,7 @@ create a new message and store it in {_msg}:
 reply with {_msg}
 ```
 
-<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>The results.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>The results.</p></figcaption></figure>
 
 {% hint style="warning" %}
 Thanks to discord, you cannot change the order of the elements. For instance, here, you cannot make the attachment displays under the embed.
@@ -119,4 +119,4 @@ create a new message and store it in {_msg}:
 reply with {_msg}
 ```
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>The results.</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (5) (1).png" alt=""><figcaption><p>The results.</p></figcaption></figure>

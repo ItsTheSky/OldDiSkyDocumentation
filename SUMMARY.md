@@ -17,5 +17,6 @@
   * [🗂 SelectMenu/Dropdown](advanced-stuff/selectmenu-dropdown.md)
   * [💭 Advanced Messages](advanced-stuff/advanced-messages.md)
 * [🎛 Modules](modules/README.md)
+  * [📜 TranSkript](modules/transkript.md)
   * [📡 Webhooks](modules/webhooks.md)
 * [📙 F.A.Q.](f.a.q..md)
