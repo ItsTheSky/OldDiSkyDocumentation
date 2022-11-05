@@ -51,3 +51,16 @@ Or, if you have a list of messages:
 set {_messages::*} to ... # specify the messages there
 generate transcript from messages {_messages::*} and store it in "plugins/ts.html"
 ```
+
+### Options
+
+When generating a transcript, it will use the default "airy" and dark theme of Discord. You can however enable the compact mode and/or the light theme when generating the template! Here's how to do so:
+
+```applescript
+set {_opts} to new transcript options with compact mode # just compact mode
+set {_opts} to new transcript options with light theme # just light theme
+set {_opts} to new transcript options with compact mode and light theme # both
+
+# We specify in the effect the options to use
+generate transcript from channel {_channel} with {_opts} and store it in "plugins/ts.html"
+```
