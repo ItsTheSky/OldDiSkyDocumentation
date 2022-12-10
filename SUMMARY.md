@@ -19,4 +19,5 @@
 * [🎛 Modules](modules/README.md)
   * [📜 TranSkript](modules/transkript.md)
   * [📡 Webhooks](modules/webhooks.md)
+  * [🎵 LavaPlayer](modules/lavaplayer.md)
 * [📙 F.A.Q.](f.a.q..md)
