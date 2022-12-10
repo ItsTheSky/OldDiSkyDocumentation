@@ -76,7 +76,7 @@ on slash command:
 Localizations are value-per-language systems. You will be able to change the command's name and description according to the client's selected language.
 
 {% hint style="info" %}
-Even if localizations are fully available on DiSky, Discord has not released it yet, and you'll need a specific [version derogation](https://discord.com/\_\_development/link?s=VQw65opXPNOuzDRAa9ID91y7BV0U0ATg%2FmZfrhCBCqc%3D.eyJ0YXJnZXRCdWlsZE92ZXJyaWRlIjp7ImRpc2NvcmRfd2ViIjp7InR5cGUiOiJicmFuY2giLCJpZCI6ImZlYXR1cmUvd2ViLXNsYXNoLWNvbW1hbmQtbG9jYWxpemF0aW9uIn19LCJyZWxlYXNlQ2hhbm5lbCI6bnVsbCwidmFsaWRGb3JVc2VySWRzIjpbXSwiYWxsb3dMb2dnZWRPdXQiOmZhbHNlLCJleHBpcmVzQXQiOiJXZWQsIDEwIEF1ZyAyMDIyIDE3OjE4OjQ1IEdNVCJ9) to see localizations! Note that on iOS all you have to do is join the (Discord Developers)[https://discord.gg/discord-developers] server and be on version 117.0 or above.
+Even if localizations are fully available on DiSky, Discord has not released it yet, and you'll need a specific [version derogation](https://discord.com/\_\_development/link?s=VQw65opXPNOuzDRAa9ID91y7BV0U0ATg%2FmZfrhCBCqc%3D.eyJ0YXJnZXRCdWlsZE92ZXJyaWRlIjp7ImRpc2NvcmRfd2ViIjp7InR5cGUiOiJicmFuY2giLCJpZCI6ImZlYXR1cmUvd2ViLXNsYXNoLWNvbW1hbmQtbG9jYWxpemF0aW9uIn19LCJyZWxlYXNlQ2hhbm5lbCI6bnVsbCwidmFsaWRGb3JVc2VySWRzIjpbXSwiYWxsb3dMb2dnZWRPdXQiOmZhbHNlLCJleHBpcmVzQXQiOiJXZWQsIDEwIEF1ZyAyMDIyIDE3OjE4OjQ1IEdNVCJ9) to see localizations! Note that on iOS all you have to do is join the [Discord Developers](https://discord.gg/discord-developers) server and be on version 117.0 or above.
 {% endhint %}
 
 You can find a list of locale codes on [Discord Docs](https://discord.com/developers/docs/reference#locales), and use them on DiSky to provide per-language name and description:
