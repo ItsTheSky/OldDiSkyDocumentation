@@ -14,11 +14,11 @@ Webhooks **do not support** components! (neither interactions)
 
 In order to create a new webhook, simply navigate inside your wanted channel's settings. Go into the `Integrations` **** panel, then `Webhooks`:
 
-![a channel's settings panel](../.gitbook/assets/image.png)
+![a channel's settings panel](<../.gitbook/assets/image (6).png>)
 
 Click on the `New Webhook` button, and just copy the webhook URL. The name and avatar that are shown here will be editable later:
 
-![the webhooks sub-panel](<../.gitbook/assets/image (1).png>)
+![the webhooks sub-panel](<../.gitbook/assets/image (1) (1).png>)
 
 ### Registering the client
 
