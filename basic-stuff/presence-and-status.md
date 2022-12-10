@@ -25,13 +25,35 @@ set the presence of the bot named "bot-name" to listening "awesome music!"
 
 set the presence of the bot named "bot-name" to playing "awesome games!"
 
-set the presence of the bot named "bot-name" to playing "awesome games!"
-
 set the presence of the bot named "bot-name" to competing "Arena World Champions"
+
+set the presence of the bot named "bot-name" to watching "YouTube"
 
 # The URL must be from YouTube or Twitch!
 set the presence of the bot named "bot-name" to streaming "things" with url "stream.url"
 ```
+
+Some examples of the presences:
+
+Listening:
+
+![Listening Presence](https://cdn.upload.systems/uploads/vRx1XhH9.png)
+
+Playing:
+
+![Playing Presence](https://cdn.upload.systems/uploads/LOYVm9gs.png)
+
+Competing:
+
+![Competing Presence](https://cdn.upload.systems/uploads/4NmNTzht.png)
+
+Watching:
+
+![Watching Presence](https://cdn.upload.systems/uploads/Nrmf2LEj.png)
+
+Streaming:
+
+![Streaming Presence](https://cdn.upload.systems/uploads/4WMVTHDd.png)
 
 ### Online Status
 

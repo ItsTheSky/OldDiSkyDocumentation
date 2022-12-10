@@ -26,6 +26,10 @@ DiSky will fire the code once any bots receive the following message:
 
 **`<any prefixes><name>`**
 
+If you had a help command with the `!` prefix, it will look something like this:
+
+**!help**
+
 Let's take a real example, and create a discord command that replies with `Pong!`:
 
 ```applescript
@@ -47,12 +51,12 @@ Let's try to make more complicated commands now. DiSky provide a way to ask for 
 
 It basically looks like that:
 
-| Type: Optional               |  Default Value | Result                      |   |   |
-| ---------------------------- | :------------: | --------------------------- | - | - |
-| Text: :x:                    |      None      | `<text>`                    |   |   |
-| Member: :white\_check\_mark: | `event-member` | `[<member=%event-member%>]` |   |   |
-| Number: :white\_check\_mark: |      None      | `[<number>]`                |   |   |
-| Offline Player: :x:          |      None      | `<offlineplayer>`           |   |   |
+| Type: Optional               |  Default Value | Result                      |
+| ---------------------------- | :------------: | --------------------------- |
+| Text: :x:                    |      None      | `<text>`                    |
+| Member: :white\_check\_mark: | `event-member` | `[<member=%event-member%>]` |
+| Number: :white\_check\_mark: |      None      | `[<number>]`                |
+| Offline Player: :x:          |      None      | `<offlineplayer>`           |
 
 {% hint style="info" %}
 As you may notice, **Optional** arguments are simply surrounded by `[ ]` while keeping the default `< >` argument delimination.
