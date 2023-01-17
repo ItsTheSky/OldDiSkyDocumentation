@@ -40,7 +40,7 @@ This is only for exact video or playlist URL, that must starts with `https://you
 
 LavaPlayer uses **section** to chunk your code, and execute the corrects one once the section is fired:
 
-```
+```applescript
 load items from url "https://www.youtube.com/watch?v=nQnZlD4dgPE":
     
     # Used if it loads a single track.
@@ -52,5 +52,37 @@ load items from url "https://www.youtube.com/watch?v=nQnZlD4dgPE":
     on playlist load:
         set {_track} to first element of tracks of loaded playlist
     
-    # 
+    # If any failure happened, like no connection, 404 errors, etc...
+    on load failure:
+        reply with "An exception occured: %the exception%"
 ```
+
+{% hint style="info" %}
+You can use the **variables** from the sub-section **outsides**! For example here, you can continue your code outside the sections with `{_track}`
+{% endhint %}
+
+#### Via Youtube search
+
+This will search for the provided input and loads tracks accordindly. Actually, `on single load` should never be called as it must found more than one video here:
+
+```applescript
+search items from input "KDA more":
+    
+    # Should not be called there.
+    on single load:
+        reply with "Oh no, something went wrong ..."
+    
+    # The playlist will contains the loaded tracks for the search.
+    # Here again we'll just keep the first loaded track.
+    on playlist load:
+        set {_track} to first element of tracks of loaded playlist
+    
+    # If any failure happened, like no connection, 404 errors, etc...
+    on load failure:
+        reply with "An exception occured: %the exception%"
+    
+    # If no video matched the input at all.
+    on no matches:
+        reply with "Nothing found for your query!"
+```
+

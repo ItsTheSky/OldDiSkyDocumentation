@@ -20,5 +20,5 @@
   * [📜 TranSkript](modules/transkript.md)
   * [📡 Webhooks](modules/webhooks.md)
   * [🎵 LavaPlayer](modules/lavaplayer.md)
-  * [⚠ LavaPlayer 1 (Old)](modules/lavaplayer-1.md)
+  * [⚠ LavaPlayer 1 (Old)](<modules/lavaplayer (1).md>)
 * [📙 F.A.Q.](f.a.q..md)
