@@ -1,43 +1,56 @@
 # 🎵 LavaPlayer
 
-{% hint style="info" %}
-**Download:** [**https://github.com/DiSkyOrg/LavaPlayer/releases**](https://github.com/DiSkyOrg/LavaPlayer/releases)****
+LavaPlayer is a DiSky module that allows developers to implement music loading & playing with their bots.
+
+## Installation
+
+{% hint style="warning" %}
+LavaPlayer is a **paid** module, that you can have on my [**Patreon**](https://patreon.com/itsthesky)****
 {% endhint %}
 
-LavaPlayer allows you to play audio from YouTube and SoundCloud in voice channels.
+* Download the latest version from the [**Patreon**](https://patreon.com/itsthesky) page.
+* Put the downloaded file in `/plugins/DiSky/modules/`
+* Restarts your server
 
-## Connecting to a voice channel
+And here we go! You can now use the syntax of LavaPlayer in your scripts!
 
-Before playing any audio, you should connect the bot to a voice channel. This can be done with the connect bot effect.
+## Basic Operation
+
+Before doing anything, it's better to understand how LavaPlayer manages tracks and audio players:
+
+### Tracks
+
+An **audio track** can be played by a bot. It holds some info such as its title, author, identifier (YouTube/SoundCloud ID, or local file path).
+
+You can load tracks through 3 different ways:
+
+#### Via local files
+
+LP supports some file format such as MP3, WAV or FLAC. For a full list, check [**here**](https://github.com/sedmelluq/lavaplayer#supported-formats).
 
 ```applescript
-connect bot named "fancyBOT" to voice channel of event-member
+set {_track} to track from file "plugins/music/mytrack.mp3"
 ```
 
-## Fetching audio
+`{_track}` now holds your local track!
 
-Before playing audio you need to retrieve said audio and store it in a variable.
+#### Via external (Youtube/Soundcloud) specific URL
 
-```applescript
-search in "youtube" parsed as audio source for "never gonna give you up" and store the tracks in {_result::*}
+This is only for exact video or playlist URL, that must starts with `https://youtube` (or `https://soundcloud` if you want to load a sound cloud audio).
+
+LavaPlayer uses **section** to chunk your code, and execute the corrects one once the section is fired:
+
 ```
-
-{% hint style="info" %}
-The `audio source` can be either "youtube" or "soundcloud". The `query` can be either text or a link, these links can also be playlists.
-{% endhint %}
-
-##Playing audio
-
-Finally all you need to do is play the audio stored in the variable!
-
-```applescript
-play {_result::*} in event-guild
-```
-
-## Looping audio
-
-You can make your bot look the current audio in a specific guild using the following effect.
-
-```applescript
-set repeating state of event-guild to true
+load items from url "https://www.youtube.com/watch?v=nQnZlD4dgPE":
+    
+    # Used if it loads a single track.
+    on single load:
+        set {_track} to loaded track
+    
+    # Used if it loads a whole playlist.
+    # Besides the playerlist's tracks, it also holds the playlist's name.
+    on playlist load:
+        set {_track} to first element of tracks of loaded playlist
+    
+    # 
 ```

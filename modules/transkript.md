@@ -25,7 +25,7 @@ This module will provide support for Discord(like website generation. You'll be 
 
 <figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption><p>Simple discussion, featuring mentions, role's colors &#x26; a bot.</p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/image (10).png" alt=""><figcaption><p>Several links &#x26; their rendering</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (3).png" alt=""><figcaption><p>Several links &#x26; their rendering</p></figcaption></figure>
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Threads/post creation</p></figcaption></figure>
 

@@ -1,6 +1,4 @@
-# 3⃣ Bot Loading
-
-
+# 3⃣ 3⃣ 3⃣ Bot Loading
 
 > :warning: You should check [**Bot Creation**](bot-creation.md) before if you haven't yet!
 
@@ -20,7 +18,6 @@ Scopes come with two sorts of **entry** (entry looks like `name: value`):
 : token: "token"
 
 ````
-
 * Section entry (form: `name: <line break> code ...`), code that could be running.
     ```javascript
 <scope name>:

@@ -32,7 +32,7 @@ An embed can have different properties:
 
 Here's an example embed containing all the above properties:
 
-<figure><img src="../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>Full example of an embed</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (12).png" alt=""><figcaption><p>Full example of an embed</p></figcaption></figure>
 
 {% hint style="warning" %}
 You cannot set a "sub" property (<mark style="color:purple;">in purple</mark>) without setting the main property.
