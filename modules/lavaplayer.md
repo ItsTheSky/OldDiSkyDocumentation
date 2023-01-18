@@ -1,88 +1,47 @@
-# 🎵 LavaPlayer
+# ⚠ LavaPlayer 1 (Old)
 
-LavaPlayer is a DiSky module that allows developers to implement music loading & playing with their bots.
-
-## Installation
-
-{% hint style="warning" %}
-LavaPlayer is a **paid** module, that you can have on my [**Patreon**](https://patreon.com/itsthesky)****
+{% hint style="danger" %}
+LavaPlayer 1 is not supported anymore. Use **LavaPlayer2** instead.
 {% endhint %}
 
-* Download the latest version from the [**Patreon**](https://patreon.com/itsthesky) page.
-* Put the downloaded file in `/plugins/DiSky/modules/`
-* Restarts your server
+{% hint style="info" %}
+**Download:** [**https://github.com/DiSkyOrg/LavaPlayer/releases**](https://github.com/DiSkyOrg/LavaPlayer/releases)\*\*\*\*
+{% endhint %}
 
-And here we go! You can now use the syntax of LavaPlayer in your scripts!
+LavaPlayer allows you to play audio from YouTube and SoundCloud in voice channels.
 
-## Basic Operation
+## Connecting to a voice channel
 
-Before doing anything, it's better to understand how LavaPlayer manages tracks and audio players:
-
-### Tracks
-
-An **audio track** can be played by a bot. It holds some info such as its title, author, identifier (YouTube/SoundCloud ID, or local file path).
-
-You can load tracks through 3 different ways:
-
-#### Via local files
-
-LP supports some file format such as MP3, WAV or FLAC. For a full list, check [**here**](https://github.com/sedmelluq/lavaplayer#supported-formats).
+Before playing any audio, you should connect the bot to a voice channel. This can be done with the connect bot effect.
 
 ```applescript
-set {_track} to track from file "plugins/music/mytrack.mp3"
+connect bot named "fancyBOT" to voice channel of event-member
 ```
 
-`{_track}` now holds your local track!
+## Fetching audio
 
-#### Via external (Youtube/Soundcloud) specific URL
-
-This is only for exact video or playlist URL, that must starts with `https://youtube` (or `https://soundcloud` if you want to load a sound cloud audio).
-
-LavaPlayer uses **section** to chunk your code, and execute the corrects one once the section is fired:
+Before playing audio you need to retrieve said audio and store it in a variable.
 
 ```applescript
-load items from url "https://www.youtube.com/watch?v=nQnZlD4dgPE":
-    
-    # Used if it loads a single track.
-    on single load:
-        set {_track} to loaded track
-    
-    # Used if it loads a whole playlist.
-    # Besides the playerlist's tracks, it also holds the playlist's name.
-    on playlist load:
-        set {_track} to first element of tracks of loaded playlist
-    
-    # If any failure happened, like no connection, 404 errors, etc...
-    on load failure:
-        reply with "An exception occured: %the exception%"
+search in "youtube" parsed as audio source for "never gonna give you up" and store the tracks in {_result::*}
 ```
 
 {% hint style="info" %}
-You can use the **variables** from the sub-section **outsides**! For example here, you can continue your code outside the sections with `{_track}`
+The `audio source` can be either "youtube" or "soundcloud". The `query` can be either text or a link, these links can also be playlists.
 {% endhint %}
 
-#### Via Youtube search
+\##Playing audio
 
-This will search for the provided input and loads tracks accordindly. Actually, `on single load` should never be called as it must found more than one video here:
+Finally all you need to do is play the audio stored in the variable!
 
 ```applescript
-search items from input "KDA more":
-    
-    # Should not be called there.
-    on single load:
-        reply with "Oh no, something went wrong ..."
-    
-    # The playlist will contains the loaded tracks for the search.
-    # Here again we'll just keep the first loaded track.
-    on playlist load:
-        set {_track} to first element of tracks of loaded playlist
-    
-    # If any failure happened, like no connection, 404 errors, etc...
-    on load failure:
-        reply with "An exception occured: %the exception%"
-    
-    # If no video matched the input at all.
-    on no matches:
-        reply with "Nothing found for your query!"
+play {_result::*} in event-guild
 ```
 
+## Looping audio
+
+You can make your bot look the current audio in a specific guild using the following effect.
+
+```applescript
+set repeating state of event-guild to true
+```
