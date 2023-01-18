@@ -20,13 +20,13 @@ Before doing anything, it's better to understand how LavaPlayer manages tracks a
 
 ### Tracks
 
-An **audio track** can be played by a bot. It holds some info such as its title, author, identifier (YouTube/SoundCloud ID, or local file path).
+An **audio track** can be played by a bot. It holds some info such as its title, author, and identifier (YouTube/SoundCloud ID, or local file path).
 
-You can load tracks through 3 different ways:
+You can load tracks in 3 different ways:
 
 #### Via local files
 
-LP supports some file format such as MP3, WAV or FLAC. For a full list, check [**here**](https://github.com/sedmelluq/lavaplayer#supported-formats).
+LP supports some file formats such as MP3, WAV, or FLAC. For a full list, check [**here**](https://github.com/sedmelluq/lavaplayer#supported-formats).
 
 ```applescript
 load track from file "plugins/music/mytrack.mp3" and store it in {_track}
@@ -36,9 +36,9 @@ load track from file "plugins/music/mytrack.mp3" and store it in {_track}
 
 #### Via external (Youtube/Soundcloud) specific URL
 
-This is only for exact video or playlist URL, that must starts with `https://youtube` (or `https://soundcloud` if you want to load a sound cloud audio).
+This is only for the exact video or playlist URL, which must starts with `https://youtube` (or `https://soundcloud` if you want to load sound cloud audio).
 
-LavaPlayer uses **section** to chunk your code, and execute the corrects one once the section is fired:
+LavaPlayer uses a **section** to chunk your code, and execute the correct one once the section is fired:
 
 ```applescript
 load items from url "https://www.youtube.com/watch?v=nQnZlD4dgPE":
@@ -63,7 +63,7 @@ You can use the **variables** from the sub-section **outsides**! For example her
 
 #### Via Youtube search
 
-This will search for the provided input and loads tracks accordindly. Actually, `on single load` should never be called as it must found more than one video here:
+This will search for the provided input and loads tracks accordingly. Actually, `on single load` should never be called as it must found more than one video here:
 
 ```applescript
 search items from input "KDA more":
@@ -72,14 +72,14 @@ search items from input "KDA more":
     on single load:
         reply with "Oh no, something went wrong ..."
     
-    # The playlist will contains the loaded tracks for the search.
+    # The playlist will contain the loaded tracks for the search.
     # Here again we'll just keep the first loaded track.
     on playlist load:
         set {_track} to first element of tracks of loaded playlist
     
     # If any failure happened, like no connection, 404 errors, etc...
     on load failure:
-        reply with "An exception occured: %the exception%"
+        reply with "An exception occurred: %the exception%"
     
     # If no video matched the input at all.
     on no matches:
@@ -90,9 +90,9 @@ search items from input "KDA more":
 
 LavaPlayer makes your life better: it comes with a built-in guild player system.
 
-Each guild **and bot** will have a specific Guild player (if you have 2 bot in 1 guild, you'll have 2 players for each bot). It holds informations such as the playing track, the volume, the queue, and much more.
+Each guild **and bot** will have a specific Guild player (if you have 2 bots in 1 guild, you'll have 2 players for each bot). It holds information such as the playing track, the volume, the queue, and much more.
 
-However, a player is not created once the bot loads; only when you play a track, the player will be got (if it exists) or created. Therefore, you **cannot change the volume** (for example) of a player before playing any track!
+However, a player has not been created once the bot loads; only when you play a track, the player will be got (if it exists) or created. Therefore, you **cannot change the volume** (for example) of a player before playing any track!
 
 #### Queue
 
@@ -108,7 +108,7 @@ If you want to specify a bot, simply append `... with bot "name"` at the end of 
 set {_current} to playing track of event-guild
 ```
 
-The volume **must** be between 0 and 1000 (both inclusive). Any negative or bigger than 1000 values will be rounded to the closer valid value.
+The volume **must** be between 0 and 1000 (both inclusive). Any negative or bigger than 1000 values will be rounded to the closest valid value.
 
 #### Manage Player
 
@@ -118,6 +118,79 @@ The volume **must** be between 0 and 1000 (both inclusive). Any negative or bigg
 | Skip the current track, by returning and removing the next track from the queue.        | `skip in event-guild and store it in {_track}` |
 | Pause the player, without changing the queue nor the playing track.                     | `pause in event-guild`                         |
 | Resume the paused track, without changing the queue nor the playing track               | `resume in event-guild`                        |
+
+## Track Events
+
+LavaPlayer2 brings some new events that fire once a track ends, starts, etc ... :
+
+```applescript
+on track start:
+    send "Track started: %event-audiotrack% by %event-bot%" to console
+
+on track end:
+    send "Track ended: %event-audiotrack% by %event-bot%" to console
+
+on track exception:
+    send "Track exception: %event-audiotrack% by %event-bot%" to console
+
+on track pause:
+    send "Track paused: %event-audiotrack% by %event-bot%" to console
+
+on track resume:
+    send "Track resumed: %event-audiotrack% by %event-bot%" to console
+
+on track seek:
+    send "Track seeked: %event-audiotrack% by %event-bot%" to console
+```
+
+## Player Utility
+
+LavaPlayer player some utility features to help Skript developers: **autoplay** and **repeat**:
+
+```applescript
+# If enabled, the playing track that ended will play again forever.
+discord command repeat [<text>]:
+    prefixes: !
+    trigger:
+        if arg-1 is not set:
+            if repeat state of event-guild is true:
+                reply with "Repeat is **enabled**!"
+            else:
+                reply with "Repeat is **disabled**!"
+        else:
+            if arg-1 is "enable":
+                set repeat state of event-guild to true
+                reply with "Repeat **enabled**!"
+            else if arg-1 is "disable":
+                set repeat state of event-guild to false
+                reply with "Repeat **disabled**!"
+            else:
+                reply with "Invalid state! Use `enable` or `disable`."
+
+# If enabled, the auto-play will start the next track once one finishes.
+# It's automatically gonna skip & play the next track basically.
+discord command autoplay [<text>]:
+    prefixes: !
+    trigger:
+        if arg-1 is not set:
+            if auto play state of event-guild is true:
+                reply with "Auto Play is **enabled**!"
+            else:
+                reply with "Auto Play is **disabled**!"
+        else:
+            if arg-1 is "enable":
+                set auto play state of event-guild to true
+                reply with "Auto Play **enabled**!"
+            else if arg-1 is "disable":
+                set auto play state of event-guild to false
+                reply with "Auto Play **disabled**!"
+            else:
+                reply with "Invalid state! Use `enable` or `disable`."
+```
+
+{% hint style="warning" %}
+Repeat is checked **before** the autoplay, aka if both are enabled, the track will repeat.
+{% endhint %}
 
 ## Full example
 
@@ -138,7 +211,7 @@ discord command play <string>:
         
         set {_botChannel} to voice channel of (self member of event-bot in event-guild)
         if {_botChannel} is set:
-            # Check if the bot is in the same channel than the member
+            # Check if the bot is in the same channel as the member
             if {_botChannel} is not {_channel}:
                 reply with "I am already connected to a different voice channel!"
                 stop
@@ -167,7 +240,7 @@ discord command play <string>:
             set {_isPlaying} to true
         
         # If the bot is not playing, no need to queue the track
-        # (as we'll plays it right away)
+        # (as we'll play it right away)
         if {_isPlaying} is false:
             force play {_track} in event-guild
             reply with "**Now playing:** `%{_track}%`"
@@ -187,7 +260,7 @@ discord command skip:
         if size of queue of event-guild is 0:
             reply with "There is nothing after the current track!"
             stop
-        # Don't forget 'skip' only skip the track in the queue (removes & returns it)
+        # Don't forget 'skip' only skip the track in the queue (remove & returns it)
         skip track in event-guild and store it in {_track}
         # We must play the new one to actually skip it.
         force play {_track} in event-guild
